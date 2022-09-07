@@ -1,0 +1,13 @@
+<%= link_to "Home", root_path %>
+<h1><%= @kitten.name %></h1>
+<p>Age: <%= @kitten.age %></p>
+<p>Cuteness: <%= @kitten.cuteness %></p>
+<p>Softness: <%= @kitten.softness %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_kitten_path(@kitten) %></li>
+  <li><%= link_to "Destroy", kitten_path(@kitten), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>

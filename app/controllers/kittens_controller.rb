@@ -15,7 +15,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
-      redirect to @kitten
+      redirect_to @kitten
     else
       render :new, status: unprocessable_entity
     end
